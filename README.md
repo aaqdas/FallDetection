@@ -1,6 +1,6 @@
 # FallDetection
 
-This repository is a modified implementation of FallAllD, M.Saleh et.Al [1] on Arduino Nano 33 BLE Sense.
+A couple of lines on problem description (implemented on Arduino Nano 33 BLE Sense). The code in this repository is built upon M.Saleh et.al's implementation in [1] We thank M. Saleh et. al for sharing their data and code in the public domain.
 
 ## Tools Required
 1. Google Colab
