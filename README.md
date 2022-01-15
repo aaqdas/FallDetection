@@ -1,4 +1,4 @@
-# FallDetection
+# Fall Detection
 
 ## Project Description
 Fall Detection is an Arduino based system that detects whether a person has fallen. It is helpful for older people who might fall and need immediate care and assistance. Our system detects the fall and can be used to alert the authorities. It is based on M.Saleh et.al's implementation in [1]. We thank M. Saleh et. al for sharing their data and code in the public domain.
