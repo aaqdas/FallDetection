@@ -15,9 +15,7 @@ Original Dataset contains data from IMU and Barometer(b) however the notebook ex
 <img width="814" alt="PlotlyFall" src="https://user-images.githubusercontent.com/65295655/149725779-699cf461-4777-4f34-86bf-7beeddc09171.png">
 
 It can be clearly seen that barometer shows almost no changes when a person falls. We also know that magnetometer(m) gives us our heading from **North** and therefore doesn't carry enough meaning to be determining if a person has fallen.
-Therefore we have utilized only Accelerometer and Magnetometer data only. We have further downsampled the data to **50 Hz** to reduce the overall computation cost. Otherwise we would have to increase the depth of our Neural Network. Here's another snippet of Sensor Data for Activities of Daily Life (ADLs).
-
-<img width="822" alt="Plotly_ADLs" src="https://user-images.githubusercontent.com/65295655/149726068-045ab66f-1c0f-4979-88f6-d68253df6d87.png">
+Therefore we have utilized only Accelerometer and Magnetometer data only. We have further downsampled the data to **50 Hz** to reduce the overall computation cost. Otherwise we would have to increase the depth of our Neural Network. 
 
 ## Model Architecture 
 We have utilized a Convolutional Neural Network to predict the falls. The model is designed with following goals:
@@ -32,9 +30,6 @@ converter=tf.lite.TFLiteConverter.from_keras_model(model)
 tflite_no_quant=converter.convert()
 converter.representative_dataset=representative_ds_gen
 converter.optimizations=[tf.lite.Optimize.DEFAULT]
-#converter.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
-converter.inference_input_type = tf.float32
-converter.inference_output_type = tf.int8
 tflite_model=converter.convert()
 ```
 We then convert our model into a FlatBuffer to fit it in our device and interpret it using a Tensorflow Lite interpreter.
