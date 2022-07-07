@@ -1,5 +1,5 @@
 # What are these files?
-The files in this directory are modified version of LSM9DS1 IMU Library for Arduino. The Accelerometer and Gyrometer data rate and maximum range are modified to meet the criteria of model.
+The files in this directory are modified version of LSM9DS1 IMU Library for Arduino. The Accelerometer and Gyroscope data rate and maximum range are modified to meet the criteria of model.
 
 # What to do with them?
 If you have not installed LSM9DS1 library in your Arduino IDE yet, install the library by following these steps.
